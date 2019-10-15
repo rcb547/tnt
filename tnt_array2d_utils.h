@@ -36,10 +36,8 @@ std::ostream& operator<<(std::ostream &s, const Array2D<T> &A)
 
     s << M << " " << N << "\n";
 
-    for (int i=0; i<M; i++)
-    {
-        for (int j=0; j<N; j++)
-        {
+    for (int i=0; i<M; i++){
+        for (int j=0; j<N; j++){
             s << A[i][j] << " ";
         }
         s << "\n";
@@ -59,13 +57,12 @@ std::istream& operator>>(std::istream &s, Array2D<T> &A)
 
 	Array2D<T> B(M,N);
 
-    for (int i=0; i<M; i++)
-        for (int j=0; j<N; j++)
-        {
+    for (int i=0; i<M; i++){
+        for (int j=0; j<N; j++){
             s >>  B[i][j];
         }
-
-	A = B;
+    }
+    A = B;
     return s;
 }
 
